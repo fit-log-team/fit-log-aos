@@ -13,11 +13,14 @@ healthConnnectVer = "1.1.0-alpha02"
 locVer = "17.1.0"
 appcompat = "1.7.0"
 material = "1.12.0"
-hilt = "2.44"
+hilt = "2.48"
 retrofit = "2.11.0"
 gson = "2.11.0"
 okhttp3 = "4.12.0"
 timber = "5.0.1"
+hilt-test = "2.48"
+coroutine-test = "1.7.1"
+test-runner = "1.5.2"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -40,6 +43,7 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" } # hilt
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" } # kapt hilt compiler
+hilt-test = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt-test"}
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-converter-scalars = { group ="com.squareup.retrofit2", name = "converter-scalars", version.ref = "retrofit"}
 retrofit-gson-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
@@ -47,6 +51,8 @@ gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
 okhttp3 = {group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp3"}
 okhttp3-interceptor = {group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3"}
 timber = {group = "com.jakewharton.timber", name = "timber", version.ref = "timber"}
+coroutine-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutine-test"}
+test-runner = {group = "androidx.test", name = "runner", version.ref = "test-runner"}
 
 
 
