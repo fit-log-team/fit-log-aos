@@ -48,6 +48,7 @@ dependencies {
     implementation(libs.hilt) //_ hilt
     kapt(libs.hilt.compiler) //_ kapt - hilt
 
+
     //_ retrofit
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.scalars)
@@ -60,6 +61,19 @@ dependencies {
 
     //_ timber
     implementation(libs.timber)
+
+    //_ -------------test------------------------
+
+    //_ hilt
+    implementation(libs.hilt.test)
+    testImplementation(libs.hilt)
+    kaptTest(libs.hilt.compiler)
+    androidTestImplementation(libs.hilt.test)
+
+    //_ coroutine
+    androidTestImplementation(libs.coroutine.test)
+    androidTestImplementation(libs.test.runner)
+
 
 
 }
