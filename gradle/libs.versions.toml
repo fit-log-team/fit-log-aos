@@ -14,6 +14,10 @@ locVer = "17.1.0"
 appcompat = "1.7.0"
 material = "1.12.0"
 hilt = "2.44"
+retrofit = "2.11.0"
+gson = "2.11.0"
+okhttp3 = "4.12.0"
+timber = "5.0.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -30,12 +34,20 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-health = {group = "androidx.health.connect", name = "connect-client", version.ref = "healthConnnectVer"} # health connect
-loc = {group = "com.google.android.gms", name = "play-services-location", version.ref = "locVer"} # gps
+health = { group = "androidx.health.connect", name = "connect-client", version.ref = "healthConnnectVer" } # health connect
+loc = { group = "com.google.android.gms", name = "play-services-location", version.ref = "locVer" } # gps
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" } # hilt
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" } # kapt hilt compiler
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-scalars = { group ="com.squareup.retrofit2", name = "converter-scalars", version.ref = "retrofit"}
+retrofit-gson-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+okhttp3 = {group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp3"}
+okhttp3-interceptor = {group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp3"}
+timber = {group = "com.jakewharton.timber", name = "timber", version.ref = "timber"}
+
 
 
 
@@ -44,7 +56,7 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 android-library = { id = "com.android.library", version.ref = "agp" }
-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt"}
-kotlin-kapt = {id ="org.jetbrains.kotlin.kapt", version.ref = "jetbrainsKotlinJvm"}
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "jetbrainsKotlinJvm" }
 
 

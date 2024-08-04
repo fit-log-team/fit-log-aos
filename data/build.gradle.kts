@@ -44,7 +44,22 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation(libs.hilt)
-    kapt(libs.hilt.compiler)
+    //_ hilt
+    implementation(libs.hilt) //_ hilt
+    kapt(libs.hilt.compiler) //_ kapt - hilt
+
+    //_ retrofit
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.converter.scalars)
+    implementation(libs.retrofit.gson.converter)
+    implementation(libs.gson)
+
+    //_ okhttp3
+    implementation(libs.okhttp3)
+    implementation(libs.okhttp3.interceptor)
+
+    //_ timber
+    implementation(libs.timber)
+
 
 }
