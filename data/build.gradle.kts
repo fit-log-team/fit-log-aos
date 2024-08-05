@@ -12,7 +12,7 @@ android {
     defaultConfig {
         minSdk = 28
 
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner = "com.example.data.CustomRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
 
@@ -67,7 +67,7 @@ dependencies {
     //_ hilt
     implementation(libs.hilt.test)
     testImplementation(libs.hilt)
-    kaptTest(libs.hilt.compiler)
+    kaptAndroidTest(libs.hilt.compiler)
     androidTestImplementation(libs.hilt.test)
 
     //_ coroutine
