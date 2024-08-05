@@ -26,7 +26,7 @@ class RetrofitModule {
     @Provides
     fun getRetrofit(client: OkHttpClient) = Retrofit
         .Builder()
-        .baseUrl("url 작성")
+        .baseUrl("https://www.naver.com/")
         .client(client)
         .build()
 
