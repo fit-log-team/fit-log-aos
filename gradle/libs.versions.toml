@@ -47,6 +47,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" } # hilt
 hilt-compiler = { group = "com.google.dagger", name = "hilt-compiler", version.ref = "hilt" } # kapt hilt compiler
 hilt-test = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt-test"}
+hilt-navigation-compose = { group = "androidx.hilt" , name = "hilt-navigation-compose", version = "1.0.0"}
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-converter-scalars = { group ="com.squareup.retrofit2", name = "converter-scalars", version.ref = "retrofit"}
 retrofit-gson-converter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
@@ -59,6 +60,9 @@ test-runner = {group = "androidx.test", name = "runner", version.ref = "test-run
 gps = {group  = "com.google.android.gms", name = "play-services-location", version.ref = "gps"}
 naver-map = {group ="io.github.fornewid", name = "naver-map-compose", version.ref = "compose"}
 naver-map-sdk = {group = "com.naver.maps", name = "map-sdk", version.ref = "naver-map-sdk"}
+retrofit-converter-serialization = { group = "com.jakewharton.retrofit", name = "retrofit2-kotlinx-serialization-converter", version = "1.0.0"}
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "1.5.0"}
+
 
 
 
