@@ -66,6 +66,7 @@ dependencies {
 
     //_ hilt
     implementation(libs.hilt.test)
+    kapt(libs.hilt.compiler)
     testImplementation(libs.hilt)
     kaptAndroidTest(libs.hilt.compiler)
     androidTestImplementation(libs.hilt.test)
@@ -73,6 +74,9 @@ dependencies {
     //_ coroutine
     androidTestImplementation(libs.coroutine.test)
     androidTestImplementation(libs.test.runner)
+
+    implementation(libs.retrofit.converter.serialization)
+    implementation(libs.kotlinx.serialization.json)
 
 
 

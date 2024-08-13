@@ -74,4 +74,8 @@ dependencies {
 
     implementation(libs.hilt)
     kapt(libs.hilt.compiler)
+
+    implementation(libs.okhttp3)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(libs.retrofit.converter.serialization)
 }

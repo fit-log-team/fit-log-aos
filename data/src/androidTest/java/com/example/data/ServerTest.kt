@@ -1,6 +1,8 @@
 package com.example.data
 
+import com.example.data.retrofit.DirectionService
 import com.example.data.retrofit.ServerService
+import com.example.domain.usecase.GetDirectionUseCase
 import dagger.hilt.android.testing.BindValue
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
@@ -15,38 +17,18 @@ import javax.inject.Inject
 class ServerTest {
 
     @Inject
-    lateinit var service: ServerService
+    lateinit var service: DirectionService
+
+    @Inject
+    lateinit var getDirectionUseCase: GetDirectionUseCase
 
     @get:Rule
     val hiltRule = HiltAndroidRule(this)
 
-//    @Inject
-//    lateinit var foo: Foo
-
-//    @BindValue
-//    val foo: Foo = Foo("ServerTest")
-
-    @Inject
-    lateinit var bar: Bar
-
     @Test
     fun 주입테스트() {
         hiltRule.inject()
-        Assert.assertNotNull(service)
-    }
-//
-    @Test
-    fun FOO_주입테스트() {
-//        hiltRule.inject()
-//        Assert.assertEquals("FakeFooModule", foo.tag)
-    }
-
-    @Test
-    fun bar주입테스트() {
-        hiltRule.inject()
-        Assert.assertNotNull(bar)
-        Assert.assertEquals("FakeFooModule", bar.foo.tag)
-
+        Assert.assertNotNull(getDirectionUseCase)
     }
 
 }

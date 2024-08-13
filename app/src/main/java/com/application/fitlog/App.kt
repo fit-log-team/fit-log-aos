@@ -1,3 +1,5 @@
+package com.application.fitlog
+
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 

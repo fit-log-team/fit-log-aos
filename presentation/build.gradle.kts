@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -72,4 +74,17 @@ dependencies {
     //_ naver-map
     implementation(libs.naver.map)
     implementation(libs.naver.map.sdk)
+
+    //_ hilt
+    implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
+
+    implementation(libs.hilt.test)
+    testImplementation(libs.hilt)
+    androidTestImplementation(libs.hilt.test)
+    implementation(libs.hilt.navigation.compose)
+
+    //_ timber
+    implementation(libs.timber)
+
 }
