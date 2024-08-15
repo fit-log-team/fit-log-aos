@@ -40,6 +40,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -78,4 +79,8 @@ dependencies {
     implementation(libs.okhttp3)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.retrofit.converter.serialization)
+
+
+    //_ timber
+    implementation(libs.timber)
 }
