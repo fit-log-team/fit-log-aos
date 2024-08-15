@@ -46,6 +46,11 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
 }
 
 dependencies {
@@ -55,6 +60,9 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
+    implementation(files("lib/com.skt.Tmap_1.76.jar"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -71,9 +79,6 @@ dependencies {
 
     //_ gps
     implementation(libs.gps)
-    //_ naver-map
-    implementation(libs.naver.map)
-    implementation(libs.naver.map.sdk)
 
     //_ hilt
     implementation(libs.hilt)
