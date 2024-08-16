@@ -1,7 +1,6 @@
 package com.example.presentation.ui.main
 
 import android.Manifest
-import android.content.Intent
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
@@ -12,8 +11,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
-import com.example.presentation.model.IntentData
-import com.example.presentation.model.LocationItem
 import com.example.presentation.ui.TMapActivity
 import com.example.presentation.util.PermissionUtils
 import com.example.presentation.util.UiController
