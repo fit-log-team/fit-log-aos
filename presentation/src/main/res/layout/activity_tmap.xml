@@ -10,7 +10,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <FrameLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_map"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
@@ -19,7 +19,8 @@
             android:layout_width="120dp"
             android:layout_height="60dp"
             android:layout_gravity="bottom|right"
-            android:layout_margin="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="50dp"
             android:text="길 찾기"
             android:textSize="20sp"
             android:background="@color/design_default_color_on_primary"
@@ -35,4 +36,5 @@
             android:background="@color/design_default_color_on_primary"
             />
     </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
