@@ -7,8 +7,32 @@
     android:layout_height="match_parent"
     tools:context=".ui.TMapActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cl_map"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:id="@+id/cl_map"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <Button
+            android:id="@+id/bt_search_direction"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:text="길 찾기"
+            android:textSize="20sp"
+            android:background="@color/design_default_color_on_primary"
+            />
+        <Button
+            android:id="@+id/bt_move_to_current_location"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_gravity="top|right"
+            android:layout_margin="16dp"
+            android:text="내 위치"
+            android:textSize="20sp"
+            android:background="@color/design_default_color_on_primary"
+            />
+    </FrameLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
