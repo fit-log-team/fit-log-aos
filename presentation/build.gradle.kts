@@ -88,6 +88,7 @@ dependencies {
     testImplementation(libs.hilt)
     androidTestImplementation(libs.hilt.test)
     implementation(libs.hilt.navigation.compose)
+    implementation("androidx.fragment:fragment-ktx:1.2.5")
 
     implementation(files("libs/vsm-tmap-sdk-v2-android-1.6.60.aar"))
     implementation(files("libs/tmap-sdk-1.4.aar"))

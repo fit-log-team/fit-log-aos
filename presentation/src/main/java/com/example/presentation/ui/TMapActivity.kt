@@ -1,9 +1,12 @@
 package com.example.presentation.ui
 
+import android.content.Context
 import android.graphics.Color
 import android.graphics.PointF
 import android.location.Location
 import android.os.Bundle
+import android.util.AttributeSet
+import android.view.View
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
