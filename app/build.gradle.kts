@@ -80,7 +80,6 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.retrofit.converter.serialization)
 
-
     //_ timber
     implementation(libs.timber)
 }

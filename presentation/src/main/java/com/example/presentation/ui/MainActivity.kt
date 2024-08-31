@@ -1,62 +1,55 @@
 package com.example.presentation.ui
 
-import android.graphics.PointF
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
+import android.view.ViewGroup
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Divider
+import androidx.compose.material3.ModalDrawerSheet
+import androidx.compose.material3.ModalNavigationDrawer
+import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.lifecycle.lifecycleScope
+import androidx.compose.ui.unit.dp
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import com.example.presentation.R
 import com.example.presentation.config.TMapConfig
-import com.example.presentation.ui.main.MainNavHost
-import com.example.presentation.ui.main.MainScreen
-import com.example.presentation.ui.theme.FitLogTheme
-import com.example.presentation.util.PermissionUtils
-import com.example.presentation.viewmodel.MainViewModel
-import com.skt.tmap.TMapPoint
+import com.example.presentation.databinding.ActivityMainBinding
+import com.example.presentation.ui.main.MainScreen2
 import com.skt.tmap.TMapView
-import com.skt.tmap.overlay.TMapMarkerItem
-import com.skt.tmap.poi.TMapPOIItem
-import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import timber.log.Timber
-import java.util.ArrayList
-import javax.inject.Inject
 
-@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-    private val viewModel by viewModels<MainViewModel>()
+
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-//        enableEdgeToEdge()
+        enableEdgeToEdge()
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+
+
         val tMapView = TMapView(this).apply {
             setSKTMapApiKey(TMapConfig.API_KEY)
             setOnMapReadyListener {
-
-            }
-        }
-
-        setContent {
-            FitLogTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MainNavHost(tMapView)
-                }
+                initLayout(this)
             }
         }
     }
 
+    private fun initLayout(tMapView: TMapView) {
+        val parent = tMapView.parent as? ViewGroup
+        parent?.removeView(tMapView)
+        binding.clMap.addView(tMapView)
 
-    override fun onStart() {
-        super.onStart()
+        binding.composeView.setContent {
+            MainScreen2()
+        }
     }
 }
