@@ -62,7 +62,6 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-//    implementation(files("lib/com.skt.Tmap_1.76.jar"))
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -88,12 +87,16 @@ dependencies {
     testImplementation(libs.hilt)
     androidTestImplementation(libs.hilt.test)
     implementation(libs.hilt.navigation.compose)
-    implementation("androidx.fragment:fragment-ktx:1.2.5")
 
+    //_ tmap
     implementation(files("libs/vsm-tmap-sdk-v2-android-1.6.60.aar"))
     implementation(files("libs/tmap-sdk-1.4.aar"))
 
     //_ timber
     implementation(libs.timber)
 
+    //_ orbit
+    implementation(libs.orbit.core)
+    implementation(libs.orbit.compose)
+    implementation(libs.orbit.viewmodel)
 }
