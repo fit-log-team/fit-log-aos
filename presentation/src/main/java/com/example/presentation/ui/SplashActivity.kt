@@ -34,7 +34,7 @@ class SplashActivity : ComponentActivity() {
 
                 LaunchedEffect(loadingTime) {
                     if (loadingTime == 1) {
-                        UiController.addActivity(this@SplashActivity, MainActivity::class)
+                        UiController.addActivity(this@SplashActivity, LoginActivity::class)
                     }
                 }
 
