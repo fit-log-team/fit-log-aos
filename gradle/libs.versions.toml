@@ -9,8 +9,6 @@ lifecycleRuntimeKtx = "2.8.4"
 activityCompose = "1.9.1"
 composeBom = "2023.08.00"
 jetbrainsKotlinJvm = "1.9.0"
-healthConnnectVer = "1.1.0-alpha02"
-locVer = "17.1.0"
 appcompat = "1.7.0"
 material = "1.12.0"
 hilt = "2.48"
@@ -22,11 +20,9 @@ hilt-test = "2.48"
 coroutine-test = "1.7.1"
 test-runner = "1.5.2"
 gps = "21.0.1"
-compose = "1.3.1"
 activity = "1.9.1"
-fragment = "1.9.1"
 constraintlayout = "2.1.4"
-material3Android = "1.2.1"
+orbit = "6.1.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -43,8 +39,6 @@ androidx-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-toolin
 androidx-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
-health = { group = "androidx.health.connect", name = "connect-client", version.ref = "healthConnnectVer" } # health connect
-loc = { group = "com.google.android.gms", name = "play-services-location", version.ref = "locVer" } # gps
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" } # hilt
@@ -65,7 +59,9 @@ retrofit-converter-serialization = { group = "com.jakewharton.retrofit", name = 
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version = "1.5.0"}
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
-androidx-material3-android = { group = "androidx.compose.material3", name = "material3-android", version.ref = "material3Android" }
+orbit-core = { group = "org.orbit-mvi", name = "orbit-core", version.ref = "orbit"}
+orbit-viewmodel = { group = "org.orbit-mvi", name = "orbit-viewmodel", version.ref = "orbit"}
+orbit-compose = { group = "org.orbit-mvi", name = "orbit-compose", version.ref = "orbit"}
 
 
 

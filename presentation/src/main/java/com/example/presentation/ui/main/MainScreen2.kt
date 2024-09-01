@@ -26,6 +26,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -33,14 +34,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.presentation.ui.component.NavigatorMenu
 import com.example.presentation.ui.component.SearchBox
 import com.example.presentation.util.PermissionUtils
+import com.example.presentation.viewmodel.MainViewModel
 import kotlinx.coroutines.launch
 import timber.log.Timber
 
 @Composable
-fun MainScreen2() {
+fun MainScreen2(viewModel: MainViewModel = hiltViewModel(), tMapView: @Composable () -> Unit) {
     val items = listOf(
         Pair("내 정보", Icons.Sharp.Person),
         Pair("퀘스트", Icons.Rounded.Star),
@@ -54,6 +57,7 @@ fun MainScreen2() {
 
     ModalNavigationDrawer(
         drawerState = drawerState,
+        gesturesEnabled = drawerState.isOpen,
         drawerContent = {
             ModalDrawerSheet(
                 modifier = Modifier.width(200.dp)
@@ -99,6 +103,7 @@ fun MainScreen2() {
             }
         }
     ) {
+        tMapView()
         SearchBox(
             modifier = Modifier
                 .padding(top = 31.dp)
