@@ -9,6 +9,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
 import com.example.presentation.ui.login.LoginScreen
 import com.example.presentation.ui.theme.FitLogTheme
+import com.example.presentation.util.UiController
 import com.example.presentation.viewmodel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -38,21 +39,22 @@ class LoginActivity : AppCompatActivity() {
     /**
      * 로그인
      */
-    fun clickLogin() {
-
+    private fun clickLogin() {
+        // FIXME 임시로 로그인 구현 하기 전 메인 화면 으로 이동
+        UiController.addActivity(this@LoginActivity, MainActivity::class)
     }
 
     /**
      * 구글 로그인
      */
-    fun clickGoogleLogin() {
+    private fun clickGoogleLogin() {
 
     }
 
     /**
      * 회원가입 창 이동
      */
-    fun clickSignUp() {
+    private fun clickSignUp() {
 
     }
 }
