@@ -1,6 +1,7 @@
 package com.example.presentation.ui.component
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.padding
@@ -43,23 +44,31 @@ fun SearchBox(
             )
         }
 
-        Text(
-            modifier = Modifier,
-            style = MaterialTheme.typography.bodyLarge,
-            fontWeight = FontWeight.Thin,
-            color = Color(0xFF49454F),
-            text = "오늘의 걷기 목표는?",
-        )
-        
-        Spacer(modifier = Modifier.weight(1f))
-        IconButton(
-            onClick = clickSearch
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.clickable {
+                clickSearch()
+            }
         ) {
-            Icon(
-                imageVector = Icons.Default.Search,
-                tint =  Color(0xFF49454F),
-                contentDescription = "Search"
+            Text(
+                modifier = Modifier,
+                style = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.Thin,
+                color = Color(0xFF49454F),
+                text = "오늘의 걷기 목표는?",
             )
+
+            Spacer(modifier = Modifier.weight(1f))
+            IconButton(
+                onClick = {}
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Search,
+                    tint =  Color(0xFF49454F),
+                    contentDescription = "Search"
+                )
+            }
         }
+
     }
 }
