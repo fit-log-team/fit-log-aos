@@ -4,5 +4,5 @@ data class SearchPoiInfo(
     var totalCount: String,
     var count: String,
     var page: String,
-    var pois: List<PoiItem>
+    var pois: Poi
 )

@@ -9,7 +9,9 @@ class GetPoiUseCaseImpl @Inject constructor(
     var tMapService: TMapService
 ): GetPoiUseCase {
     override suspend fun invoke(keyword: String): Result<List<PoiItem>> = runCatching{
-        val response = tMapService.requestPoi(searchKeyword = keyword).searchPoiInfo.pois
+        val response = tMapService.requestPoi(searchKeyword = keyword).searchPoiInfo.pois.poi
         response
+    }.onFailure {
+        throw Exception(it)
     }
 }

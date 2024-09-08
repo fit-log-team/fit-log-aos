@@ -35,5 +35,5 @@ data class PoiItem(
     var zipCode: String,
     var adminDongCode: String,
     var legalDongCode: String,
-    var newAddress: NewAddress,
+    var newAddressList: NewAddress,
 )
