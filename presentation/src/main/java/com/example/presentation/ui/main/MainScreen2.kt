@@ -52,6 +52,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.presentation.ui.component.NavigatorMenu
 import com.example.presentation.ui.component.SearchBox
+import com.example.presentation.ui.theme.color_white
+import com.example.presentation.ui.theme.primaryContainer
 import com.example.presentation.viewmodel.MainViewModel
 import kotlinx.coroutines.launch
 
@@ -70,9 +72,6 @@ fun MainScreen2(viewModel: MainViewModel = hiltViewModel(), tMapView: @Composabl
     var selectedItem by remember { mutableStateOf(items[0]) }
 
     var showBottomSheet by remember { mutableStateOf(false) }
-    val sheetState = rememberModalBottomSheetState(
-        skipPartiallyExpanded = true,
-    )
 
     var keyword by remember { mutableStateOf("") }
 
@@ -146,50 +145,11 @@ fun MainScreen2(viewModel: MainViewModel = hiltViewModel(), tMapView: @Composabl
         )
 
         if (showBottomSheet) {
-            keyword = ""
-            ModalBottomSheet(
-                sheetState = sheetState,
-                onDismissRequest = {
-                    showBottomSheet = false
-                },
-                shape = BottomSheetDefaults.HiddenShape,
-                dragHandle = {}
+            LocationSearchScreen(
+                keyword = keyword,
+                onKeywordChange = { keyword = it }
             ) {
-                Column(
-                    modifier = Modifier
-                        .fillMaxSize()
-                ) {
-                    Row(
-                        modifier = Modifier
-                            .padding(top = 33.dp)
-                            .fillMaxWidth(),
-                        verticalAlignment = Alignment.CenterVertically
-                    ) {
-                        IconButton(onClick = {
-                            showBottomSheet = false
-                        }) {
-                            Icon(imageVector = Icons.Filled.ArrowBack, contentDescription = "ArrowBack")
-                        }
-
-                        TextField(
-                            modifier = Modifier.background(MaterialTheme.colorScheme.primaryContainer),
-                            placeholder = {
-                                Text(text = "오늘의 걷기 목표는?")
-                            },
-                            value = keyword, onValueChange = {
-                                keyword = it
-                                //_ TODO poi를 조회할건데 최종 입력된 키워드로만 조회하도록 해야함. (이전 조회는 취소 해야함.)
-                            })
-
-                        IconButton(onClick = {
-                            keyword = ""
-                        }) {
-                            Icon(imageVector = Icons.Filled.Clear, contentDescription = "Clear")
-                        }
-                    }
-                    Divider()
-                }
-
+                showBottomSheet = false
             }
         }
 
