@@ -13,6 +13,12 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.sp
 
+/**
+ * 밑줄 친 텍스트 버튼
+ *
+ * @param title     밑줄 친 버튼 제목
+ * @param onClick   버튼 이벤트 처리
+ */
 @Composable
 fun UnderlineText(title: String, onClick: () -> Unit) {
     Text(
@@ -25,9 +31,6 @@ fun UnderlineText(title: String, onClick: () -> Unit) {
         textAlign = TextAlign.Center,
         fontWeight = FontWeight.Medium,
         fontSize = 16.sp,
-        modifier = Modifier
-            .clickable {
-                onClick
-            },
+        modifier = Modifier.clickable { onClick() }
     )
 }
