@@ -27,10 +27,9 @@ fun UnderlineText(title: String, onClick: () -> Unit) {
                 append(title)
             }
         },
-        color = Color(0xFF65558F),
         textAlign = TextAlign.Center,
         fontWeight = FontWeight.Medium,
-        fontSize = 16.sp,
+        fontSize = 13.sp,
         modifier = Modifier.clickable { onClick() }
     )
 }

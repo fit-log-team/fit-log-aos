@@ -21,9 +21,16 @@ class SignupActivity : AppCompatActivity() {
         setContent {
             FitLogTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    SignupScreen()
+                    SignupScreen(clickSignup = { signup() })
                 }
             }
         }
+    }
+
+    /**
+     * 회원가입
+     */
+    private fun signup() {
+
     }
 }

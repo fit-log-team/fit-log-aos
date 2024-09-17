@@ -25,7 +25,7 @@ class LoginActivity : AppCompatActivity() {
                     LoginScreen(
                         clickLogin = { clickLogin() },
                         clickGoogleLogin = { clickGoogleLogin() },
-                        clickSignUp = { clickSignup() })
+                        gotoSignup = { gotoSignup() })
                 }
             }
         }
@@ -48,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
     /**
      * 회원가입 창 이동
      */
-    private fun clickSignup() {
+    private fun gotoSignup() {
         UiController.addActivity(this@LoginActivity, SignupActivity::class)
     }
 }
