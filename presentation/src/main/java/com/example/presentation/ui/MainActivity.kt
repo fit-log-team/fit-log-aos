@@ -53,7 +53,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun initLayout(tMapView: TMapView) {
         binding.composeView.setContent {
-            MainScreen2(tMapView = {
+            MainScreen2(
+                context = this@MainActivity
+                ,tMapView = {
                 AndroidView(factory = { tMapView })
             })
         }

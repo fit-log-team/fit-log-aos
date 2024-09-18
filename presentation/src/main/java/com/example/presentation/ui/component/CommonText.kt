@@ -31,3 +31,22 @@ fun UnderlineText(title: String, onClick: () -> Unit) {
             },
     )
 }
+
+/**
+ * 화면 별 제목 Text
+ * @param title 텍스트
+ * @param textColor 텍스트 색상
+ */
+@Composable
+fun TitleBoldText(
+    title : String,
+    textColor : Color = Color(0xFF65558F),
+) {
+    Text(
+        text = title,
+        color = textColor,
+        textAlign = TextAlign.Start,
+        fontWeight = FontWeight.Bold,
+        fontSize = 24.sp,
+    )
+}

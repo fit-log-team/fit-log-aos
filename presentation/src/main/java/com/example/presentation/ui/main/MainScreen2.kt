@@ -1,5 +1,6 @@
 package com.example.presentation.ui.main
 
+import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -50,14 +51,17 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import com.example.presentation.ui.LoginActivity
 import com.example.presentation.ui.component.NavigatorMenu
 import com.example.presentation.ui.component.SearchBox
+import com.example.presentation.ui.quest.QuestActivity
+import com.example.presentation.util.UiController
 import com.example.presentation.viewmodel.MainViewModel
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen2(viewModel: MainViewModel = hiltViewModel(), tMapView: @Composable () -> Unit) {
+fun MainScreen2(context : Context, viewModel: MainViewModel = hiltViewModel(), tMapView: @Composable () -> Unit) {
     val items = listOf(
         Pair("내 정보", Icons.Sharp.Person),
         Pair("퀘스트", Icons.Rounded.Star),
@@ -100,6 +104,9 @@ fun MainScreen2(viewModel: MainViewModel = hiltViewModel(), tMapView: @Composabl
                             selectedItem = item
                             when (item.first) {
                                 //_ TODO 각 메뉴별 클릭 이벤트
+                                "퀘스트" -> {
+                                    UiController.addActivity(context, QuestActivity::class)
+                                }
                             }
                         },
                     )
