@@ -1,4 +1,4 @@
-package com.example.presentation.ui.component
+package com.example.presentation.ui.component.main
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -22,7 +22,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun SearchBox(
+fun SearchBoxUI(
     modifier: Modifier,
     clickMenu: () -> Unit,
     clickSearch: () -> Unit
